@@ -1,0 +1,39 @@
+/* Custom Theme Changes */
+.bg-dark {
+    background-color: #102e4d !important;
+}
+
+.bg-gradient {
+    /* background-image: radial-gradient(circle, #679ac9, #517da8, #3b6189, #26476a, #102e4d); */
+    background-image: radial-gradient(circle, #679ac9, #5786b2, #47729c, #385f86, #284c71, #214367, #1a3a5e, #123254, #113152, #113050, #102f4f, #102e4d);
+}
+
+.btn-theme {background-color:#294866; border-color: #294866;}
+.btn-theme:hover, .btn-outline-theme:hover {background-color: #1e354b; border-color: #1a2e42;}
+.btn-theme:focus, .btn-theme.focus, .btn-outline-theme:focus, .btn-outline-theme.focus {box-shadow: 0 0 0 3px rgba(41, 72, 102, 0.5);}
+.btn-theme.disabled, .btn-theme:disabled, .btn-outline-theme.disabled, .btn-outline-theme:disabled {background-color: #294866; border-color: #294866;}
+.btn-theme:active, .btn-theme.active,.show > .btn-theme.dropdown-toggle, .btn-outline-theme:active, .btn-outline-theme.active,.show > .btn-outline-theme.dropdown-toggle {background-color: #1e354b; background-image: none; border-color: #1a2e42;}
+.btn-theme:not(:disabled):not(.disabled).active, .btn-theme:not(:disabled):not(.disabled):active, .show>.btn-theme.dropdown-toggle, .btn-outline-theme:not(:disabled):not(.disabled).active, .btn-outline-theme:not(:disabled):not(.disabled):active, .show>.btn-outline-theme.dropdown-toggle {background-color: #1e354b; border-color: #1a2e42;}
+.btn-theme:not(:disabled):not(.disabled):active:focus,.btn-primary:not(:disabled):not(.disabled).active:focus,.show>.btn-primary.dropdown-toggle:focus, .btn-outline-theme:not(:disabled):not(.disabled):active:focus,.btn-outline-primary:not(:disabled):not(.disabled).active:focus,.show>.btn-outline-primary.dropdown-toggle:focus {box-shadow:0 0 0 .2rem rgba(41,72,102,0.5)}
+
+.btn-outline-theme {border-color: #294866; color: #123456;}
+
+/* Scroll media effect */
+#mainNav {
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: #102e4d;
+}
+
+@media (min-width: 992px) {
+  #mainNav {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  #mainNav.navbar-scrolled {
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: #102e4d;
+  }
+}
