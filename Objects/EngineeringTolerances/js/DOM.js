@@ -5,9 +5,6 @@ $.get("sidebar.html", function(sidebarcode){
     $("#sidebar-placeholder").replaceWith(sidebarcode);
 });
 
-});
-
-
 /* Document Ready ----------------------------------------------------------- */
 $(document).ready(function() {
 
