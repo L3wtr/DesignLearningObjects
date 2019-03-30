@@ -45,7 +45,7 @@ class Base {
 /* Constraint class to render all constraint types at each location */
 class Constraint {
   constructor(type, location) {
-    let updateRender = function() {}, 
+    let updateRender = function() {},
         updatePosition = function() {},
         updatePreview = function() {};
     let position, rate, redRGB;
@@ -140,7 +140,7 @@ class Constraint {
             return position = drawShoulder(location, basic.stepped, true);
           }
         break
-        case 'cap': 
+        case 'cap':
           updateRender = function() {
             fill('white');
             drawCap(location);
@@ -207,7 +207,7 @@ class Drag {
               isHovering = checkHover({x: pos.centre.x + move.x, shift: 0, long: shaft.dim.x, high: shaft.dia.stepped}, true);
               if (!isHovering) {
                 isHovering = checkHover({x: pos.centre.x - canvas.dim.x * 0.1 - 12.5 + move.x, shift: 0, long: canvas.dim.x * 0.7 - 25, high: shaft.dia.straight}, true);
-              }            
+              }
             }
             else {
               isHovering = checkHover({x: pos.centre.x + move.x, shift: 0, long: shaft.dim.x, high: shaft.dia.straight}, true);
@@ -262,7 +262,7 @@ class Drag {
             }
             return x;
           }
-        break 
+        break
       }
     }
     this.init();
@@ -313,7 +313,7 @@ function setup() {
     },
     offset: {
       up: canvas.dim.y * 0.5 - shaft.dia.straight - 20,
-      down: canvas.dim.y * 0.5 + shaft.dia.straight + 20, 
+      down: canvas.dim.y * 0.5 + shaft.dia.straight + 20,
       left: canvas.dim.x * 0.25,
       right: canvas.dim.x * 0.75,
     },
@@ -441,7 +441,7 @@ function reset() {
   updateStyle();
 
   $("#graphic").fadeOut(200, function() {
-    $(this).attr("src","animations/background.gif").on('load', function(){$(this).fadeIn(200)});;
+    $(this).attr("src","BearingConstraintsModel/animations/background.gif").on('load', function(){$(this).fadeIn(200)});;
   });
 
   // Reset warnings
@@ -456,7 +456,7 @@ function feature(type) {
   design.runHighlight = [];
 
   $("#graphic").fadeOut(200, function() {
-    $(this).attr("src","animations/" + type + ".gif").on('load', function(){$(this).fadeIn(200)});;
+    $(this).attr("src","BearingConstraintsModel/animations/" + type + ".gif").on('load', function(){$(this).fadeIn(200)});;
   });
 
   switch (type) {
@@ -498,7 +498,7 @@ function updateMode() {
   }
 
   $("#graphic").fadeOut(250, function() {
-    $(this).fadeIn(250).attr("src","animations/background.gif");
+    $(this).fadeIn(250).attr("src","BearingConstraintsModel/animations/background.gif");
   });
 }
 
@@ -532,7 +532,7 @@ function updateStyle() {
     }
     shaftFile = shaftModel;
   }
-  
+
   for (let i=0; i<typeName.length; i++) {
     for (let j=0; j<8; j++) {
       design[typeName[i]][j].resetHighlight();
@@ -577,16 +577,16 @@ function mousePressed() {
 
   if (mode == 'test') {
     let graphic = document.getElementById('graphic');
-    if ((design.drag[1].part || design.drag[2].part) && graphic.getAttribute('src') != 'animations/bearing.gif') {
+    if ((design.drag[1].part || design.drag[2].part) && graphic.getAttribute('src') != 'BearingConstraintsModel/animations/bearing.gif') {
       $("#graphic").fadeOut(200, function() {
-        $(this).attr("src","animations/bearing.gif").on('load', function(){$(this).fadeIn(200)});
+        $(this).attr("src","BearingConstraintsModel/animations/bearing.gif").on('load', function(){$(this).fadeIn(200)});
       });
     }
-    else if (design.drag[0].part && graphic.getAttribute('src') != 'animations/' + shaftFile + '.gif') {
+    else if (design.drag[0].part && graphic.getAttribute('src') != 'BearingConstraintsModel/animations/' + shaftFile + '.gif') {
       $("#graphic").fadeOut(200, function() {
-        $(this).attr("src","animations/" + shaftFile + ".gif").on('load', function(){$(this).fadeIn(200)});
+        $(this).attr("src","BearingConstraintsModel/animations/" + shaftFile + ".gif").on('load', function(){$(this).fadeIn(200)});
       });
-    } 
+    }
   }
 }
 
@@ -670,7 +670,7 @@ function updateConstraint(type, location) {
   }
 }
 
-/* Removes a constraint at a given location */ 
+/* Removes a constraint at a given location */
 function removeConstraint(type, location) {
   if (location.constructor !== Array ) {
     location = [location];
@@ -748,7 +748,7 @@ function constraintLogic(x, part, spacer) {
                 }
                 return design.drag[k + 1.5].drawX(x);
               }
-            } 
+            }
           }
 
           // Constraint logic when bearings are selected (left k=-0.5, right k=0.5)
@@ -774,7 +774,7 @@ function constraintLogic(x, part, spacer) {
 
         // Default constraint motion if no specific conditions are met
         if (design.drag[partName.indexOf(part)].part) {
-          return design.drag[partName.indexOf(part)].drawX(x); 
+          return design.drag[partName.indexOf(part)].drawX(x);
         }
       }
     }

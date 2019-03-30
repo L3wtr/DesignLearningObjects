@@ -18,7 +18,13 @@
 
 .btn-outline-theme {border-color: #294866; color: #123456;}
 
-/* Scroll media effect */
+/* Landing Page ------------------------------------------------------------- */
+.icons-sizing {
+    max-width: 50%;
+    padding: 20px;
+}
+
+/* Scroll media effect ------------------------------------------------------ */
 #mainNav {
     -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
