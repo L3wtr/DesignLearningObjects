@@ -5,6 +5,14 @@ $.get("sidebar.html", function(sidebarcode){
     $("#sidebar-placeholder").replaceWith(sidebarcode);
 });
 
+// Enable Tooltips
+$(document).ready(function() {
+    $('body').tooltip({
+        selector: "[data-tooltip=tooltip]",
+        container: "body"
+    });
+});
+
 /* Document Ready ----------------------------------------------------------- */
 $(document).ready(function() {
 

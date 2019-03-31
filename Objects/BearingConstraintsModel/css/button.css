@@ -77,7 +77,7 @@
 
 /* Media Resizes ------------------------------------------------------------ */
 @media (max-width: 1600px) {
-    p, li, .alert, .side-content li, figcaption {
+    p, li, .alert, .side-content li, .btn {
         font-size: 0.9em;
     }
     h4 {
@@ -91,9 +91,6 @@
     }
     .btn-settings .btn, .btn-reset .btn {
       transform: translate(8px, -8px) scale(0.8);
-    }
-    .btn {
-        font-size: 0.9rem;
     }
     .btn-reset {
     right: 55px;

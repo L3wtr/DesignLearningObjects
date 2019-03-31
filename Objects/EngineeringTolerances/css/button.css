@@ -17,6 +17,10 @@
     padding: 10px;
 }
 
+.modal-content .d-flex {
+    padding: 5px 40px 0px 40px;
+}
+
 /* Settings button type */
 .btn-settings {
     right: 0px;
@@ -182,7 +186,7 @@
 
 /* Media Resizes ------------------------------------------------------------ */
 @media (max-width: 1600px) {
-    p, li, .alert, .side-content li, figcaption {
+    p, li, .alert, .side-content li, .modal-body .btn, figcaption {
         font-size: 0.9em;
     }
     h4 {
