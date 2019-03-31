@@ -84,11 +84,6 @@ figure figcaption {
     border-radius: 2px;
 }
 
-#well-shaft-figure, #spacer-figure, #poor-shaft-figure, #well-housing-figure, #poor-housing-figure {
-    float: left;
-    margin: 0px;
-}
-
 #simulation-figure {
     float: left;
     margin-right: 30px;

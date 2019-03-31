@@ -87,19 +87,19 @@ function updateAssembly() {
 
 /* Appends warning boxes to the index page using JQuery */
 function warningBox(part, message, amber) {
-  let warning = $('<div class="round-box"><b>Warning: </b>' + message + '</div>').hide(0).delay(200).show(400);
+  let warning = $('<div class="alert alert-danger alert-white warning-box"><div class="icon"><span class="fas fa-exclamation-circle"></span></div><b>Warning!</b> <br>' + message + '</div>').hide(0).delay(400).fadeIn(400);
   let warningName = ['shaft', 'leftBearing', 'rightBearing', 'merged'];
 
-  warning.css('backgroundColor', '#ffcccc');
   if (amber) {
-    warning.css('backgroundColor', '#ffffcc');
+    warning.removeClass('alert-danger');
+    warning.addClass('alert-warning');
   }
   $(warning).addClass(part);
 
   if (part == 'constraint') {
     if (message != basic.message) {
       basic.message = message;
-      $('.constraint').hide(400);
+      $('.constraint').fadeOut(400);
       $('#bearing-table').after(warning);
     }
   }
@@ -107,8 +107,8 @@ function warningBox(part, message, amber) {
     for (let i=0; i<warningName.length; i++) {
       if (part == warningName[i] && part != basic.assembly[i]) {
         if (part == 'merged') {
-          $('.right').hide(400);
-          $('.left').hide(400);
+          $('.right').fadeOut(400);
+          $('.left').fadeOut(400);
         }
 
         $('#bearing-table').after(warning);
@@ -121,9 +121,9 @@ function warningBox(part, message, amber) {
 /* Removes specified JQuery warning boxes */
 function removeWarning(part) {
   if (part == 'all') {
-    $('.round-box').hide(400);
+    $('.warning-box').fadeOut(400);
   }
   else {
-    $('.' + part).hide(400);
+    $('.' + part).fadeOut(400);
   }
 }

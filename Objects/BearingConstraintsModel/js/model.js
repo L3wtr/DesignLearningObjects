@@ -378,10 +378,10 @@ function setup() {
 function draw() {
   // Base model
   if (mode == 'design') {
-    background(204, 216, 240);
+    background(240, 240, 228);
   }
   else {
-    background(240, 240, 255);
+    background(204, 216, 240);
   }
 
   for (let i=0; i<basic.layer.length; i++) {
@@ -436,8 +436,6 @@ function reset() {
   for (let i =0; i<8; i++) {
     updateConstraint('empty', i);
   }
-  document.getElementById('housing').checked = false;
-  updateHousing();
   updateStyle();
 
   $("#graphic").fadeOut(200, function() {
@@ -485,16 +483,20 @@ function feature(type) {
 }
 
 /* Updates model mode */
-function updateMode() {
-  let modeCheck = document.querySelector('input[name="mode.ID"]:checked').value;
+function updateMode(modeCheck) {
   mode = modeCheck;
   design.runHighlight = [];
 
   if (mode == 'test') {
-    $('.test-message').fadeIn(300);
+    $(".selection").css("display", "none");
+    $('#test-message').fadeIn(300);
+    $(".placeholder").css('background-color', '#ccd8f0');
   }
   else {
-    $('.test-message').fadeOut(300);
+    $('#test-message').fadeOut(300, function() {
+      $(".selection").css("display", "block");
+      $(".placeholder").css('background-color', '#f0f0e4');
+    });
   }
 
   $("#graphic").fadeOut(250, function() {
@@ -504,7 +506,7 @@ function updateMode() {
 
 /* Updates the chosen shaft style */
 function updateStyle() {
-  let stepCheck = document.querySelector('input[name="shaft.ID"]:checked').value;
+  let stepCheck = $('input[name=ToggleShaft]:checked').val();
   if (stepCheck == 'stepped') {
     basic.stepped = true;
     removeConstraint('collar', [1, 2, 3]);
@@ -547,9 +549,8 @@ function updateStyle() {
 }
 
 /* Updates bearing housing (merged or unmerged) */
-function updateHousing() {
-  let mergeCheck = document.getElementById('housing');
-  if (mergeCheck.checked) {
+function updateHousing(mergedCheck) {
+  if (mergedCheck) {
     basic.merged = true;
   }
   else {

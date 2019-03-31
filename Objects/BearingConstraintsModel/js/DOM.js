@@ -1,40 +1,42 @@
-/* Opens options modal */
-var modal = document.getElementById('modalBox');
-var open = document.getElementById('options');
-var close = document.getElementsByClassName('close')[0];
+/* Loading Page ------------------------------------------------------------- */
 
-open.addEventListener('click', openOptions);
-close.addEventListener('click', closeOptions);
-window.addEventListener('click', outsideOptions);
+// Load sidebar 
+$.get("sidebar.html", function(sidebarcode){
+  $("#sidebar-placeholder").replaceWith(sidebarcode);
+});
 
-function openOptions() {
-  modal.style.display = 'block';
-}
+// Enable Tooltips
+$(document).ready(function() {
+    $('body').tooltip({
+        selector: "[data-tooltip=tooltip]",
+        container: "body"
+    });
+});
 
-function closeOptions() {
-  modal.style.display = 'none';
-}
+/* Switch tab event --------------------------------------------------------- */
+$('.nav-tabs span').click(function(){
+  // Show tab
+  $(this).tab('show');
+});
 
-function outsideOptions(e) {
-  if (e.target == modal) {
-    modal.style.display = 'none';
-  }
-}
+/* Switch shaft radio button group event ------------------------------------ */
+$("#sel-straight, #sel-stepped").on('click', function() {
 
-/* Hides and shows selection buttons */
-var modeSelect = document.getElementsByClassName('switch-big')[0];
-var selection = document.getElementsByClassName('selection')[0];
-var placeholder = document.getElementsByClassName('placeholder')[0];
+  // Clear previously selected
+  $("#sel-straight, #sel-stepped").removeClass('btn-info');
+  $("#sel-straight, #sel-stepped").addClass('btn-outline-info');
 
-modeSelect.addEventListener('click', modeSelection);
+  // Toggle button class for clarification
+  $(this).toggleClass('btn-outline-info btn-info');
+});
 
-function modeSelection() {
-  if (mode == 'design') {
-    selection.style.display = 'block';
-    placeholder.style.backgroundColor = '#ccd8f0';
-  }
-  else {
-    selection.style.display = 'none';
-    placeholder.style.backgroundColor = '#f0f0ff';
-  }
-}
+/* Switch housing radio button group event ---------------------------------- */
+$("#sel-seperated, #sel-merged").on('click', function() {
+
+  // Clear previously selected
+  $("#sel-seperated, #sel-merged").removeClass('btn-info');
+  $("#sel-seperated, #sel-merged").addClass('btn-outline-info');
+
+  // Toggle button class for clarification
+  $(this).toggleClass('btn-outline-info btn-info');
+});

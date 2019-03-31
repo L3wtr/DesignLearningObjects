@@ -207,18 +207,6 @@ a.sidelink:hover {
 ----------------------------------------------------- */
 
 @media (max-width: 1600px) {
-    p, li, .alert, .side-content li, figcaption {
-        font-size: 0.9em;
-    }
-    h4 {
-        font-size: 1.2em;
-    }
-    h6 {
-        font-size: 1em;
-    }
-    #simulation-container, #simulation-container .btn, #simulation-container input {
-        font-size: 0.9em;
-    }
     #sidebar {
         min-width: 150px;
         max-width: 150px;
@@ -237,16 +225,6 @@ a.sidelink:hover {
     .display-5 {
         font-size: 2rem;
         margin-right: 20px;
-    }
-    #datum-wa.btn-tear, #datum-wb.btn-tear, #datum-pa.btn-tear, #datum-pb.btn-tear, #datum-ha.btn-tear, #datum-hb.btn-tear {
-        transform: rotate(-45deg) translate(5px, -5px) scale(0.75) !important;
-    }
-    .form-inline .form-control {
-        width: 70px;
-        padding: .05rem .3rem;
-    }
-    .btn-settings .btn {
-      transform: translate(8px, -8px) scale(0.8);
     }
 }
 
