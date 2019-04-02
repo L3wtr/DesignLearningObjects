@@ -24,6 +24,11 @@
     padding: 20px;
 }
 
+.card img {
+    padding: 20px;
+    border-radius: 5px;
+}
+
 /* Scroll media effect ------------------------------------------------------ */
 #mainNav {
     -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);

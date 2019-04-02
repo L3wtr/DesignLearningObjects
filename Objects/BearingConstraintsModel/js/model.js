@@ -97,7 +97,7 @@ class Constraint {
             if (location > 3) {
               if (!flag.alert && !basic.merged) {
                 if (confirm('This will merge the bearing housings. Do you wish to continue?')) {
-                  document.getElementById('housing').checked = true;
+                  mergeHousings();
                   basic.merged = true;
                   flag.alert = true;
                 }

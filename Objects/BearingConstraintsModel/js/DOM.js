@@ -1,6 +1,6 @@
 /* Loading Page ------------------------------------------------------------- */
 
-// Load sidebar 
+// Load sidebar
 $.get("sidebar.html", function(sidebarcode){
   $("#sidebar-placeholder").replaceWith(sidebarcode);
 });
@@ -21,7 +21,6 @@ $('.nav-tabs span').click(function(){
 
 /* Switch shaft radio button group event ------------------------------------ */
 $("#sel-straight, #sel-stepped").on('click', function() {
-
   // Clear previously selected
   $("#sel-straight, #sel-stepped").removeClass('btn-info');
   $("#sel-straight, #sel-stepped").addClass('btn-outline-info');
@@ -32,7 +31,6 @@ $("#sel-straight, #sel-stepped").on('click', function() {
 
 /* Switch housing radio button group event ---------------------------------- */
 $("#sel-seperated, #sel-merged").on('click', function() {
-
   // Clear previously selected
   $("#sel-seperated, #sel-merged").removeClass('btn-info');
   $("#sel-seperated, #sel-merged").addClass('btn-outline-info');
@@ -40,3 +38,13 @@ $("#sel-seperated, #sel-merged").on('click', function() {
   // Toggle button class for clarification
   $(this).toggleClass('btn-outline-info btn-info');
 });
+
+/* Merge housings (external spacer) ----------------------------------------- */
+function mergeHousings() {
+  // Clear previously selected
+  $("#sel-seperated, #sel-merged").removeClass('btn-info');
+  $("#sel-seperated, #sel-merged").addClass('btn-outline-info');
+
+  // Toggle button class for clarification
+  $("#sel-merged").toggleClass('btn-outline-info btn-info');
+};
