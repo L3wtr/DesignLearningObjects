@@ -22,7 +22,7 @@ $(document).ready(function() {
   $("#introduction-tab").addClass('active');
 
   // Beta modal
-  // $('#betaModal').modal('show');
+  $('#betaModal').modal('show');
 
   // Disable run simulation on Edge browsers
   if (navigator.userAgent.indexOf('Edge') >= 0){

@@ -68,14 +68,19 @@
                         <figcaption>Figure 1 - Plate mounted gear mechanism.</figcaption>
                     </figure>
 
+                    <h4>What is tolerance stack-up?</h4>
                     <p class="text-dark font-weight-normal">
-                        The aim of this Learning Object is to demonstrate how your design decisions can influence the final outcome of a manufactured product. When manufacturing parts for an assembly, the position of each component can vary according to an accepted tolerance. Certain dimensions will contribute their own error based on the variation in size between these tolerance limits. In a poorly designed component, these errors can lead to significant misalignments and poor fits - a process known as <b>tolerance stackup</b>.
+                        Engineering tolerances decide the acceptable range of sizes for a manufactured component. When manufacturing parts for an assembly, certain dimensions will contribute an error due to the variation in component size between the tolerance limits. As these errors build up, certain parts of the assembly will become misaligned or fit incorrectly and the system may not function as intended. This process is known as <b>tolerance stack-up</b>.
                     </p>
+
+                    <h4>Engineering Example</h4>
                     <p class="text-dark font-weight-normal">
-                        This exercise will cover the design of a simple mechanism, made up of two shafts, two housings and a fixed plate (see <span style="white-space: nowrap">Figure 1</span>). In this example, one side of the mechanism (<span class="font-weight-bold" style="color:rgb(41, 72, 102)">blue</span>) is designed using different types of constraints to reduce tolerance stackup and minimise misalignment of the gears. The other side (<span class="font-weight-bold" style="color:rgb(247, 151, 95)">orange</span>) is an example of a poorly designed assembly that experiences significant tolerance stackup and is susceptible to severe misalignment.
+                        This Learning Object covers the design of a simple mechanism, made up of two shafts, two housings and a fixed plate (see <span style="white-space: nowrap">Figure 1</span>). In this example, one side of the mechanism (<span class="font-weight-bold" style="color:rgb(41, 72, 102)">blue</span>) is designed using different types of constraints to reduce tolerance stack-up and minimise misalignment of the gears. The other side (<span class="font-weight-bold" style="color:rgb(247, 151, 95)">orange</span>) is an example of a poorly designed assembly that experiences significant tolerance stack-up and is susceptible to severe misalignment.
                     </p>
+
+                    <h4>Using this Learning Object</h4>
                     <p class="text-dark font-weight-normal">
-                        The tabs in the top right corner will direct you to the relevant engineering drawings, where you will be presented with examples of good and bad engineering design. The <b>simulation</b> page can be used to demonstrate the effects of tolerance stackup by testing the statistical variation in size for each of the manufactured parts.
+                      The aim of this Learning Object is to demonstrate how your design decisions can influence the final outcome of a manufactured product. The tabs in the top right corner will direct you to a set of engineering drawings, where you will be presented with examples of good and bad engineering design. Take the time to inspect these drawings, try out the interactive features and consider some of the discussion points. The simulation page can be used to simulate the tolerance stack of the gear mechanism as if it were to be manufactured on a mass scale. Reflect on the stack distribution and discuss how it relates to the two engineering design examples.
                     </p>
                 </div>
 
@@ -154,17 +159,20 @@
 
                     <div class="side-content">
                         <p class="text-dark font-weight-normal">
-                            The example drawings provided demonstrate how the form of a shaft can contribute to the tolerance stackup. The <b>well designed shaft</b> uses various constraint types to locate the bearings and fix the spur gear, including a <b>spacer</b> that seperates the two. The <b>poorly designed shaft</b> only uses external circlips that are referenced from a datum point.
+                            The example drawings provided demonstrate how the form of a shaft can contribute to the tolerance stack-up. The <b>well designed shaft</b> uses various constraint types to locate the bearings and fix the spur gear, including a <b>spacer</b> that seperates the two. The <b>poorly designed shaft</b> only uses external circlips that are referenced from a datum point.
+                        </p>
+                        <p class="text-dark font-weight-normal">
+                            The tear-shaped buttons can be used to change the reference point of certain dimensions. These changes will be reflected in the distribution model simulation.
                         </p>
 
                         <div class="alert alert-primary alert-white">
                             <div class="icon">
                                 <span class="fas fa-info-circle"></span>
                             </div>
-                            To toggle which types of stackup dimension are displayed, click the settings button and select from <i><b>all</b></i>, <i><b>axial</b></i> or <i><b>radial</b></i>.
+                            To toggle which types of stack-up dimension are displayed, click the settings button and select from <i><b>all</b></i>, <i><b>axial</b></i> or <i><b>radial</b></i>.
                         </div>
 
-                        <h4>Things to think about</h4>
+                        <h4>Discussion points</h4>
                         <ul>
                             <li>Try changing the datum reference point (A and B) to see how it affects the axial misalignment.</li>
                             <li>Which shaft design is easier to manufacture and why?</li>
@@ -225,27 +233,30 @@
 
                     <div class="side-content">
                         <p class="text-dark font-weight-normal">
-                            The design of the bearing housings also contribute to the tolerance stackup in both the axial and radial directions. The <b>well designed housing</b> uses a combination of shoulders and an endcap to locate the fixed bearing and the plate. The <b>poorly designed housing</b> only uses internal circlips to locate the bearing, and fasteners to locate the plate.
+                            The design of the bearing housings also contribute to the tolerance stack-up in both the axial and radial directions. The <b>well designed housing</b> uses a combination of shoulders and an endcap to locate the fixed bearing and the plate. The <b>poorly designed housing</b> only uses internal circlips to locate the bearing, and fasteners to locate the plate.
+                        </p>
+                        <p class="text-dark font-weight-normal">
+                            The tear-shaped buttons can be used to change the type of fasteners on the poorly designed housing. These changes will be reflected in the distribution model simulation.
                         </p>
 
                         <div class="alert alert-primary alert-white">
                             <div class="icon">
                                 <span class="fas fa-info-circle"></span>
                             </div>
-                            To toggle which types of stackup dimensions are displayed, click the settings button and select from <i><b>all</b></i>, <i><b>axial</b></i> or <i><b>radial</b></i>.
+                            To toggle which types of stack-up dimensions are displayed, click the settings button and select from <i><b>all</b></i>, <i><b>axial</b></i> or <i><b>radial</b></i>.
                         </div>
 
-                        <h4>Things to think about</h4>
+                        <h4>Discussion points</h4>
                         <ul>
-                            <li>Try comparing the radial stackup contributions for the well designed and poorly designed housings.</li>
-                            <li>How is the tolerance stackup affected by switching the type of fastener in the poorly designed housing - A is constrained by two dowel pins, B is constrained by two hex bolts.</li>
+                            <li>Try comparing the radial stack-up contributions for the well designed and poorly designed housings.</li>
+                            <li>How is the tolerance stack-up affected by switching the type of fastener in the poorly designed housing - A is constrained by two dowel pins, B is constrained by two hex bolts.</li>
                         </ul>
                     </div>
                 </div>
 
                 <div id="simulation-content" style="display:none;">
                     <p class="text-dark font-weight-normal" style="padding-bottom: 10px;">
-                        When manufacturing multiple components with toleranced dimensions, the variation in part size will tend to follow a <b>Gaussian Distribution</b>, where the tighter the tolerance range, the narrower the distribution and vice versa. As more and more tolerances begin to stackup, the variation in size becomes more prominent, which can lead to unwanted misalignments.
+                      The gear mechanism example, shown in Figure 4, is simulated in the <b>Distribution Model</b> to demonstrate the effect of tolerance stack-up on the misalignment of key components. Try comparing the results of the well designed and poorly designed drawings. How does the design of the components affect the misalignment and what improvements could be made?
                     </p>
 
                     <div id="simulation-container">
@@ -262,7 +273,7 @@
                                 <span class="nav-link" href="#simulation-assumptions">Assumptions</span>
                             </li>
                             <li class="nav-item">
-                                <span class="nav-link" href="#simulation-custom">Custom Model</span>
+                                <span class="nav-link" href="#simulation-custom">Custom Distribution Model</span>
                             </li>
                         </ul>
 
@@ -309,7 +320,7 @@
 
                                     <div id="simulation-settings">
                                         <p class="card-text text-dark font-weight-normal">
-                                            This model simulates the stackup distribution based on limits given in the engineering drawings. To test the variation in misalignment, select a direction, the number of units you wish to simulate and press run.
+                                            This model simulates the stack-up distribution based on limits given in the engineering drawings. To test the variation in misalignment, select a direction, the number of units you wish to simulate and press run.
                                         </p><hr>
 
                                         <h6 class="card-title">Datums and Fasteners Selected:</h6>
@@ -369,17 +380,17 @@
 
                                 <div id="simulation-assumptions" class="tab-pane">
                                     <p class="card-text text-dark font-weight-normal">
-                                        The distribution model simulates the gear mechanism under a number of assumptions.
+                                        The distribution model simulates the misalignment of the gear mechanism based on the following assumptions:.
                                     </p>
 
-                                    <h6 class="card-title">Tolerance asusmptions:</h6>
+                                    <h6 class="card-title">Tolerance asusmptions</h6>
                                     <p class="card-text text-dark font-weight-normal">
-                                        The gear mechanism used in this example is made up of multiple components, each with their own unique tolerances. To simplify this model, only the custom manufactured parts (given in the engineering drawings) were considered. The inherent tolerances of stock components (eg. bearings, bolts, gears) were not included as part of this simulation.
+                                        The gear mechanism used in this example includes multiple components, each with their own unique tolerances. To simplify this model, only the custom manufactured parts (shown in the engineering drawings) were considered. The inherent tolerances of stock components (eg. bearings, bolts, gears) were not included as part of this simulation.
                                     </p>
 
-                                    <h6 class="card-title">Model assumptions:</h6>
+                                    <h6 class="card-title">Model assumptions</h6>
                                     <p class="card-text text-dark font-weight-normal">
-                                        The distribution model simulates the variation in part size using a Gaussian distribution, mapped across the upper and lower limits. Sizes are generated using a 5<sup>th</sup> order approximation method based on the central limit theorem [<a href="https://en.wikipedia.org/wiki/Normal_distribution#Generating_values_from_normal_distribution">1</a>].
+                                        The distribution model simulates the variation in part size using a Gaussian distribution, mapped across the upper and lower tolerance limits. Sizes are generated using an Irwin-Hall distribution that approximates a normal distribution without the need for excessive computation [<a href="https://en.wikipedia.org/wiki/Normal_distribution#Generating_values_from_normal_distribution">1</a>].
                                     </p>
 
                                 </div>
@@ -424,7 +435,7 @@
 
                                     <div id="simulation-settings-custom">
                                         <p class="card-text text-dark font-weight-normal">
-                                            To simulate the distribution model for your own designs, add the lower and upper bounds of each dimension, select the number of units and press run.
+                                          To simulate the distribution model for your own drawings, add the lower and upper bounds of each dimension under <b>Tolerance Set 1</b>, select the number of units and press run. To compare the distribution against another drawing design, add a second set of bounds under <b>Tolerance Set 2</b>.
                                         </p> <hr>
 
                                         <div id="bounds-container" class="container">
@@ -596,8 +607,8 @@
 
                             <ul>
                                 <li><b>All</b> - All dimensions relevant to manufacture are shown.</li>
-                                <li><b>Axial</b> - Only the dimensions that contribute to the axial stackup are shown.</li>
-                                <li><b>Radial</b> - Only the dimensions that contribute to the radial stackup are shown.</li>
+                                <li><b>Axial</b> - Only the dimensions that contribute to the axial stack-up are shown.</li>
+                                <li><b>Radial</b> - Only the dimensions that contribute to the radial stack-up are shown.</li>
                             </ul>
 
                         </div>
