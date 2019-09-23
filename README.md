@@ -16,6 +16,7 @@ Web application features include:
   - Real world engineering examples with interactive engineering drawings
   - Settings option for modifying drawing appearance
   - An interactive distribution model simulation for demonstrating tolerance stack-up concepts
+  
 - **Bearing Constraints Model**
   - Interactive design tool for testing shaft-bearing constraint designs
   - Dynamic bearing constraints table with warning system
@@ -27,8 +28,8 @@ Web application features include:
 
 - Bootstrap
 - JQuery
-- [p5.js]("https://p5js.org/" "p5js.org")
-- [Plotly.js]("https://plot.ly/javascript/" "plot.ly/javascript")
+- [p5.js](https://p5js.org/ "p5js.org")
+- [Plotly.js](https://plot.ly/javascript/ "plot.ly/javascript")
 
 #### Deployment
 
@@ -48,5 +49,6 @@ Areas for future improvement may include:
 
 - **Project Supervisor**
   - Prof Daniele Dini, Imperial College London
+  
 - **Project Co-supervisor**
   - Dr Richard van Arkel, Imperial College London
